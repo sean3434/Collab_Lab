@@ -13,11 +13,6 @@
                 <% const videogame = videogames[i] %>
                 <h3><a href="/game/<%= i %>"><%= videogame.title %></a></h3>
                 <img class="card-image" src="<%= videogame.image %>" alt="Placeholder image" />
-               <ul>
-                   <li><%= videogame.platform %></li>
-                   <li><%= videogame.sales %></li>
-                   <li><%= videogame.releaseDate %></li>
-               </ul>
             <% } %> 
         </div>
 </body>
