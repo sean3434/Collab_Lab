@@ -8,6 +8,17 @@
 </head>
 <body>
     <h1>Video Game Index</h1>
-    
+        <div>
+            <% for(let i=0; i < videogames.length; i++){ %>
+                <% const videogame = videogames[i] %>
+                <h3><a href="/game/<%= i %>"><%= videogame.title %></a></h3>
+                <img class="card-image" src="<%= videogame.image %>" alt="Placeholder image" />
+               <ul>
+                   <li><%= videogame.platform %></li>
+                   <li><%= videogame.sales %></li>
+                   <li><%= videogame.releaseDate %></li>
+               </ul>
+            <% } %> 
+        </div>
 </body>
 </html>
