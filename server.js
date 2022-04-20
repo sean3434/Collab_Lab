@@ -28,7 +28,12 @@ app.get("/game/:id", (req, res) => {
     id = req.params.id
     res.render("show.ejs", { videogames: videogames[id] });
   });
-
+//POST
+app.post('/', (req, res) => { 
+	const createdProduct = req.body
+	videogames.push(createdProduct)
+    res.redirect('/');
+  });
 
 
 
