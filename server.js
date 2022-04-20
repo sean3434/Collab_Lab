@@ -28,6 +28,11 @@ app.get("/game/:id", (req, res) => {
     id = req.params.id
     res.render("show.ejs", { videogames: videogames[id] });
   });
+//DELETE
+app.delete('/:id', (req, res) => {
+  videogames.splice( req.params.id, 1);
+  return res.redirect('/');
+});
 //POST
 app.post('/', (req, res) => { 
 	const createdProduct = req.body
