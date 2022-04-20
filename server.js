@@ -19,11 +19,18 @@ app.get("/", (req, res) => {
     res.render("index.ejs", { videogames: videogames });
   });
 
+  //NEW
+app.get('/new', (req, res) => {
+  res.render('new.ejs');
+  });
 // SHOW
 app.get("/game/:id", (req, res) => {
     id = req.params.id
     res.render("show.ejs", { videogames: videogames[id] });
   });
+
+
+
 
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
