@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Edit Page | <%=newGame.title%> </h1>
-    <form action="/" method="POST">
+    <form action="/game/<%= id %>?_method=PUT" method="POST">
         <div>
             <label for="title">Game Title:</label>
             <input 
@@ -59,7 +59,14 @@
             name="image"
             id="image"
             value="<%= newGame.image %>"/>
-            
         </div>
+        <div class="field is-grouped">
+            <div class="control">
+              <a class="button is-info" href="/game/<%= newGame.id %> "
+                >Cancel</a
+              >
+              <button class="button is-success">Edit Game</button>
+            </div>
+          </div>
 </body>
 </html>

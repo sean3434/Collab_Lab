@@ -51,7 +51,11 @@ app.post('/', (req, res) => {
     res.redirect('/');
   });
 
-
+// UPDATE
+app.put('/game/:id', (req, res) => {
+    videogames[req.params.id] = req.body
+    res.redirect(`/`)
+});
 
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
