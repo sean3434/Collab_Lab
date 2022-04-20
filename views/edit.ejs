@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Page | <%=newGame.title%> </h1>
+    <form action="/" method="POST">
+        <div>
+            <label for="title">Game Title:</label>
+            <input 
+            type="text"
+            placeholder="Enter Title"
+            name="title"
+            id="title"
+            value="<%= newGame.title %>"/>
+        </div>
+        <div>
+            <label for="platform">Platform:</label>
+            <input 
+            type="text"
+            placeholder="Enter Type"
+            name="platform"
+            id="platform"
+            value="<%= newGame.platform %>"/>
+            
+        </div>
+        <div>
+            <label for="sales">Sales:</label>
+            <input 
+            class="input"
+            type="text"
+            placeholder="Enter Image URL"
+            name="sales"
+            id="sales"
+            value="<%= newGame.sales %>"/>
+            
+        </div>
+        <div>
+            <label for="releaseDate">Release Date:</label>
+            <input 
+            class="input"
+            type="text"
+            placeholder="Enter Image URL"
+            name="releaseDate"
+            id="releaseDate"
+            value="<%= newGame.releaseDate %>"/>
+            
+        </div>
+        <div>
+            <label for="image">Image:</label>
+            <input 
+            class="input"
+            type="text"
+            placeholder="Enter Image URL"
+            name="image"
+            id="image"
+            value="<%= newGame.image %>"/>
+            
+        </div>
+</body>
+</html>

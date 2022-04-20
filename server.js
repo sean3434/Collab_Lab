@@ -33,6 +33,17 @@ app.delete('/:id', (req, res) => {
   videogames.splice( req.params.id, 1);
   return res.redirect('/');
 });
+
+// EDIT
+app.get('/game/:id/edit', (req,res) => {
+    const newGame = videogames[req.params.id]
+    const context = {
+        newGame: newGame,
+        id: req.params.id
+    }
+    res.render('edit.ejs', context)
+  })
+
 //POST
 app.post('/', (req, res) => { 
 	const createdProduct = req.body
